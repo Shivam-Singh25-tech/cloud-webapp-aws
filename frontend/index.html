@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cloud Web App</title>
+</head>
+
+<body>
+
+<h1>Users</h1>
+
+<button onclick="loadUsers()">Load Users</button>
+
+<ul id="users"></ul>
+
+<script>
+
+function loadUsers(){
+
+fetch("http://LOAD-BALANCER-DNS/users")
+.then(res => res.json())
+.then(data => {
+
+let list=document.getElementById("users");
+
+data.forEach(user=>{
+let li=document.createElement("li");
+li.innerText=user.name + " - " + user.email;
+list.appendChild(li);
+});
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
