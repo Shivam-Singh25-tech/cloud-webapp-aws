@@ -7,7 +7,7 @@ This project demonstrates a production-style cloud architecture using AWS.
 S3 → CloudFront → Load Balancer → EC2 → RDS
 ## Architecture Diagram
 
-![Cloud Web App Architecture](architecture/cloud web app.png)
+![Cloud Web App Architecture](cloud web app.png)
 
 ## Technologies
 
